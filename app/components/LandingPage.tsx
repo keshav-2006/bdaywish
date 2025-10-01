@@ -121,7 +121,7 @@ export default function LandingPage({
           style={{ textShadow: '1px 1px 2px rgba(255, 255, 255, 0.8)' }}
         >
           Today is all about celebrating the most amazing person in my life. 
-          You bring so much joy and love into this world, and I'm grateful for every moment with you.
+          You bring so much joy and love into this world, and I&apos;m grateful for every moment with you.
         </motion.p>
 
         {/* Enhanced Decorative Stars with more variety */}

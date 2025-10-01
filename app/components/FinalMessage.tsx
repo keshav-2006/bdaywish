@@ -130,7 +130,7 @@ export default function FinalMessage({ onScrollToTop }: FinalMessageProps) {
           variants={itemVariants}
           style={{ textShadow: '2px 2px 4px rgba(255, 182, 193, 0.3)' }}
         >
-          I'm so lucky to have you ❤️
+          I&apos;m so lucky to have you ❤️
         </motion.h1>
 
         {/* Enhanced Secondary Message */}
@@ -186,11 +186,11 @@ export default function FinalMessage({ onScrollToTop }: FinalMessageProps) {
             }}
             style={{ textShadow: '1px 1px 2px rgba(255, 255, 255, 0.8)' }}
           >
-            "You are the sunshine that brightens my days,<br />
+            &ldquo;You are the sunshine that brightens my days,<br />
             the laughter that fills my heart with joy,<br />
             and the love that makes everything worthwhile.<br />
             <br />
-            Today and every day, I celebrate you! 🌟"
+            Today and every day, I celebrate you! 🌟&rdquo;
           </motion.p>
         </motion.div>
 

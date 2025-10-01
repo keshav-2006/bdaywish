@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Heart, Sparkles, RotateCcw, Wind } from 'lucide-react'
 
@@ -27,18 +27,18 @@ export default function InteractiveFeature() {
   const [candlesLit, setCandlesLit] = useState(true)
   const [showWishMessage, setShowWishMessage] = useState(false)
 
-  const balloonColors = [
+  const balloonColors = useMemo(() => [
     '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', 
     '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9'
-  ]
+  ], [])
 
-  const confettiColors = [
+  const confettiColors = useMemo(() => [
     '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', 
     '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9'
-  ]
+  ], [])
 
   // Generate balloons
-  const generateBalloons = () => {
+  const generateBalloons = useCallback(() => {
     const newBalloons: Balloon[] = []
     for (let i = 0; i < 12; i++) {
       newBalloons.push({
@@ -50,7 +50,7 @@ export default function InteractiveFeature() {
       })
     }
     setBalloons(newBalloons)
-  }
+  }, [balloonColors])
 
   // Pop balloon and create confetti
   const popBalloon = (balloonId: number) => {
@@ -112,7 +112,7 @@ export default function InteractiveFeature() {
   // Initialize balloons on mount
   useEffect(() => {
     generateBalloons()
-  }, [])
+  }, [generateBalloons])
 
   return (
     <section className="min-h-screen py-16 px-4 md:px-8 bg-gradient-to-br from-soft-mint via-soft-pink to-soft-lavender relative overflow-hidden">
@@ -130,7 +130,7 @@ export default function InteractiveFeature() {
         </h2>
         <p className="font-poppins text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4"
            style={{ textShadow: '1px 1px 2px rgba(255, 255, 255, 0.8)' }}>
-          Let's have some fun! Choose your favorite interactive feature below.
+          Let&apos;s have some fun! Choose your favorite interactive feature below.
         </p>
       </motion.div>
 
@@ -143,7 +143,7 @@ export default function InteractiveFeature() {
         viewport={{ once: true }}
       >
         <div className="bg-white/60 backdrop-blur-sm rounded-full p-2 cute-shadow-lg">
-          <button
+          <motion.button
             className={`px-6 py-3 rounded-full font-poppins font-medium transition-all duration-300 transform hover:scale-105 ${
               activeFeature === 'balloons'
                 ? 'bg-cute-pink text-white cute-shadow-lg'
@@ -154,8 +154,8 @@ export default function InteractiveFeature() {
             whileTap={{ scale: 0.95 }}
           >
             🎈 Balloon Pop
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             className={`px-6 py-3 rounded-full font-poppins font-medium transition-all duration-300 transform hover:scale-105 ${
               activeFeature === 'cake'
                 ? 'bg-cute-pink text-white cute-shadow-lg'
@@ -166,7 +166,7 @@ export default function InteractiveFeature() {
             whileTap={{ scale: 0.95 }}
           >
             🎂 Cake Candles
-          </button>
+          </motion.button>
         </div>
       </motion.div>
 
