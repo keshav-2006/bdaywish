@@ -1,0 +1,291 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Pacifico&family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  color: #2d3748;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #ffeef8 0%, #f0f8ff 50%, #fff5f5 100%);
+  min-height: 100vh;
+}
+
+/* Enhanced text readability */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+p {
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+/* Cute and lovable theme enhancements */
+.cute-shadow {
+  box-shadow: 0 10px 25px -5px rgba(255, 182, 193, 0.3), 0 10px 10px -5px rgba(255, 182, 193, 0.1);
+}
+
+.cute-shadow-lg {
+  box-shadow: 0 20px 40px -10px rgba(255, 182, 193, 0.4), 0 10px 20px -5px rgba(255, 182, 193, 0.2);
+}
+
+.lovable-gradient {
+  background: linear-gradient(135deg, #ffeef8 0%, #f8f0ff 25%, #f0f8ff 50%, #fff0f8 75%, #f8fff0 100%);
+}
+
+.romantic-glow {
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.3), 0 0 40px rgba(255, 182, 193, 0.1);
+}
+
+/* Enhanced cute animations */
+@keyframes cute-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.05); }
+}
+
+@keyframes cute-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
+
+@keyframes cute-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+@keyframes cute-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-15px) rotate(2deg); }
+  66% { transform: translateY(-5px) rotate(-1deg); }
+}
+
+@keyframes cute-sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+}
+
+/* Cute button styles */
+.cute-button {
+  @apply px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 active:scale-95;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+  box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
+}
+
+.cute-button:hover {
+  box-shadow: 0 6px 20px rgba(255, 154, 158, 0.6);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Enhanced responsive typography */
+@media (max-width: 640px) {
+  html { font-size: 14px; }
+  .text-responsive-xl { font-size: 1.5rem; line-height: 1.4; }
+  .text-responsive-6xl { font-size: 2.5rem; line-height: 1.2; }
+  .text-responsive-5xl { font-size: 2rem; line-height: 1.3; }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  html { font-size: 15px; }
+  .text-responsive-xl { font-size: 1.75rem; line-height: 1.5; }
+  .text-responsive-6xl { font-size: 3.5rem; line-height: 1.1; }
+  .text-responsive-5xl { font-size: 2.5rem; line-height: 1.2; }
+}
+
+@media (min-width: 769px) {
+  .text-responsive-xl { font-size: 2rem; line-height: 1.6; }
+  .text-responsive-6xl { font-size: 4rem; line-height: 1.1; }
+  .text-responsive-5xl { font-size: 3rem; line-height: 1.2; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #FFC0CB, #E6E6FA);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #FFB6C1, #DDA0DD);
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heart-beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes balloon-float {
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+@keyframes confetti {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+}
+
+/* Floating hearts animation */
+.floating-heart {
+  position: absolute;
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-heart:nth-child(odd) {
+  animation-delay: -2s;
+  animation-duration: 8s;
+}
+
+.floating-heart:nth-child(even) {
+  animation-delay: -4s;
+  animation-duration: 7s;
+}
+
+/* Sparkle animation */
+.sparkle {
+  position: absolute;
+  animation: sparkle 2s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Glassmorphism effect */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Paper texture effect */
+.paper-texture {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f5f5f5' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Torn paper effect */
+.torn-paper {
+  position: relative;
+}
+
+.torn-paper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 0%, transparent 48%, #8B4513 49%, #8B4513 51%, transparent 52%);
+  pointer-events: none;
+}
+
+/* Confetti particles */
+.confetti-particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #FF6B6B;
+  animation: confetti 3s ease-out forwards;
+}
+
+.confetti-particle:nth-child(odd) {
+  background: #4ECDC4;
+}
+
+.confetti-particle:nth-child(3n) {
+  background: #45B7D1;
+}
+
+.confetti-particle:nth-child(4n) {
+  background: #96CEB4;
+}
+
+.confetti-particle:nth-child(5n) {
+  background: #FFEAA7;
+}
+
+/* Responsive text */
+@media (max-width: 640px) {
+  .text-responsive-xl {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  
+  .text-responsive-6xl {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
+/* Loading animation */
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #FFC0CB;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Section transitions */
+.section-transition {
+  transition: all 0.5s ease-in-out;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+/* Focus styles for accessibility */
+.focus-ring:focus {
+  outline: 2px solid #FFC0CB;
+  outline-offset: 2px;
+}
