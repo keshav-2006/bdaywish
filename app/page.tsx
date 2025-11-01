@@ -58,7 +58,7 @@ export default function Home() {
 
       {/* Landing Page */}
       <LandingPage 
-        name="Versha Darlling" 
+        name="Tinniiii" 
         onScrollToNext={scrollToPhotoGallery}
       />
 

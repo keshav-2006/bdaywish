@@ -8,23 +8,43 @@ interface LoveLetterSectionProps {
 }
 
 export default function LoveLetterSection({ 
-  letterContent = `My pyaara kuchhuu puchuu,
+  letterContent = `Dear Tamanna,
 
-Happy Birthday! 🎂❤️
 
-Can you believe it's been over 15 years of us being together through life's little adventures? We may not have a thousand photos to prove it, but the truth is, our memories live in something much bigger than pictures. They live in the laughter we've shared, the countless conversations, the way we understand each other without words, and the quiet comfort of just being around one another.
 
-That one photo we have may capture a moment — but my heart carries millions of snapshots of you: your smile, your care, your voice, and the way you make every moment brighter.
+Happy Birthday to one of the most special people in my life ❤️
 
-You are my best friend, my safe place, my forever person — and today, on your special day, I just want you to know how much you mean to me. Thank you for being my constant all these years, for every unseen memory we've created, and for every little moment that has shaped us.
 
-Here's to more laughter, more adventures, and more moments that don't need a camera to be remembered. Because with you, every second is unforgettable. 💕
 
-And i know you handle a lot of stuff all alone, and you're very tired of all this. But all your hardships will soon come to an end and provide a very sweet and fruitfull result. Just keep patience and always grow in your life💗✨
+It's honestly crazy to think that we've been friends for 8 years now — from those innocent school days in class 6 to all the madness, late-night talks, random fights, and endless memories we've created together. Sometimes I look back and can't believe how much we've grown, yet our bond has stayed just as strong (maybe even stronger, despite all our silly arguments 😅).
 
-Happy Birthday once again.
-Always yours,
-Keshuu`
+
+
+We've fought, ignored each other, made up again, laughed till our stomachs hurt, and done so many crazy things that only we would understand. And that's exactly what makes our friendship so special — it's real, imperfect, but full of love, care, and genuine connection.
+
+
+
+You've been there through so many phases of my life — sometimes scolding me, sometimes making me laugh, sometimes just being that silent support I didn't even have to ask for. I don't say this often, but you really mean a lot to me, Tamanna. I honestly can't imagine my life without your madness, sarcasm, and all those random calls that somehow make my day better.
+
+
+
+I hope this birthday brings you all the happiness you deserve — because you truly deserve the best of everything. May you keep shining, keep smiling that crazy smile of yours, and never ever change (okay maybe be a little less annoying sometimes 😜).
+
+
+
+And just so you know — no matter how much we fight, I'll always have your back. Always.
+
+
+
+Happy Birthday, Tamanna 🎉💖
+
+Thank you for being you — and for sticking with me all these years. Let's make many more unforgettable memories ahead.
+
+
+
+With lots of love,
+
+Keshav`
 }: LoveLetterSectionProps) {
   const floatingHearts = Array.from({ length: 6 }, (_, i) => i)
 
